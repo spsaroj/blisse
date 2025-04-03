@@ -1,0 +1,209 @@
+/* General Body and Container */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  color: #2d3748;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+/* Navigation */
+nav {
+  background-color: #fef3c7;
+  padding: 16px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  text-decoration: none;
+  color: #b45309;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #7c2d12;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-amber-800 {
+  color: #b45309;
+}
+
+.text-amber-700 {
+  color: #f59e0b;
+}
+
+/* Hero Section */
+header {
+  background-color: #fef7e4;
+  padding: 80px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #9a3412;
+}
+
+header p {
+  font-size: 1.125rem;
+  color: #ca8a04;
+  margin-bottom: 32px;
+}
+
+header button {
+  background-color: #d97706;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+header button:hover {
+  background-color: #f59e0b;
+  cursor: pointer;
+}
+
+/* Featured Candles */
+#products {
+  padding: 64px 0;
+}
+
+#products h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.grid img {
+  width: 100%;
+  height: 256px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid .hover\:scale-105:hover img {
+  transform: scale(1.05);
+}
+
+.grid div {
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.grid div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.grid h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #9a3412;
+}
+
+.grid p {
+  color: #ca8a04;
+  margin-bottom: 16px;
+}
+
+.grid .flex {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid .bg-amber-500 {
+  background-color: #d97706;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.grid .bg-amber-500:hover {
+  background-color: #f59e0b;
+}
+
+/* Footer */
+footer {
+  background-color: #fef3c7;
+  padding: 40px 0;
+}
+
+footer p {
+  color: #9a3412;
+}
+
+footer a {
+  text-decoration: none;
+  color: #b45309;
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: #7c2d12;
+}
+
+footer .space-x-4 {
+  margin-top: 16px;
+}
+
+footer .space-x-4 a {
+  margin: 0 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .text-4xl {
+      font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+      grid-template-columns: 1fr;
+  }
+
+  header h1 {
+      font-size: 1.75rem;
+  }
+
+  header p {
+      font-size: 1rem;
+  }
+
+  header button {
+      padding: 10px 20px;
+  }
+}

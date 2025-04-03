@@ -1,6 +1,8 @@
 import React from 'react';
+import './page.css';
 
 const LandingPage = () => {
+
     const featuredCandles = [
         {
             id: 1,
@@ -34,14 +36,15 @@ const LandingPage = () => {
 
     return (
         <div className="min-h-screen bg-white">
+
             {/* Navigation */}
-            <nav className="bg-amber-100 p-4">
+            <nav className="bg-amber-100 p-4 shadow-md">
                 <div className="container mx-auto flex justify-between items-center">
                     <div className="text-2xl font-bold text-amber-800">Candlelight Creations</div>
                     <div className="space-x-4">
-                        <a href="#products" className="text-amber-700 hover:text-amber-900">Products</a>
-                        <a href="#about" className="text-amber-700 hover:text-amber-900">About</a>
-                        <a href="#contact" className="text-amber-700 hover:text-amber-900">Contact</a>
+                        <a href="#products" className="text-amber-700 hover:text-amber-900 transition-colors">Products</a>
+                        <a href="#about" className="text-amber-700 hover:text-amber-900 transition-colors">About</a>
+                        <a href="#contact" className="text-amber-700 hover:text-amber-900 transition-colors">Contact</a>
                     </div>
                 </div>
             </nav>
@@ -52,7 +55,7 @@ const LandingPage = () => {
                 <p className="text-xl text-amber-700 mb-8">Discover our artisan candles that transform your space</p>
                 <button
                     onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="bg-amber-600 text-white px-6 py-3 rounded-full hover:bg-amber-700 transition"
+                    className="bg-amber-600 text-white px-6 py-3 rounded-full hover:bg-amber-700 transition-all"
                 >
                     Shop Now
                 </button>
@@ -61,11 +64,11 @@ const LandingPage = () => {
             {/* Featured Candles */}
             <section id="products" className="container mx-auto py-16">
                 <h2 className="text-3xl font-bold text-center mb-10">Our Featured Collection</h2>
-                <div className="grid grid-cols-4 gap-6">
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {featuredCandles.map((candle) => (
                         <div
                             key={candle.id}
-                            className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition"
+                            className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-transform transform hover:scale-105"
                         >
                             <img
                                 src={candle.image}
@@ -79,7 +82,7 @@ const LandingPage = () => {
                                     <span className="text-lg font-bold text-amber-800">${candle.price}</span>
                                     <button
                                         onClick={() => alert(`View details for ${candle.name}`)}
-                                        className="bg-amber-500 text-white px-4 py-2 rounded hover:bg-amber-600"
+                                        className="bg-amber-500 text-white px-4 py-2 rounded hover:bg-amber-600 transition-colors"
                                     >
                                         View Details
                                     </button>
@@ -95,11 +98,12 @@ const LandingPage = () => {
                 <div className="container mx-auto text-center">
                     <p className="text-amber-800">© 2024 Candlelight Creations. All Rights Reserved.</p>
                     <div className="mt-4 space-x-4">
-                        <a href="#privacy" className="text-amber-700 hover:text-amber-900">Privacy Policy</a>
-                        <a href="#terms" className="text-amber-700 hover:text-amber-900">Terms of Service</a>
+                        <a href="#privacy" className="text-amber-700 hover:text-amber-900 transition-colors">Privacy Policy</a>
+                        <a href="#terms" className="text-amber-700 hover:text-amber-900 transition-colors">Terms of Service</a>
                     </div>
                 </div>
             </footer>
+
         </div>
     );
 };

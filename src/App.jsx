@@ -2,11 +2,11 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-// import './App.css';
+import './App.css';
 import LandingPage from './pages/LandingPage';
 import About from './pages/About';
 
-const App=() => {
+const App = () => {
   return (
     <Router>
       <Navbar />
